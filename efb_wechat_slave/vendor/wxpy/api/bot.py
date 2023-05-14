@@ -67,8 +67,8 @@ class Bot(object):
         :param start_immediately: Start the bot immediately.
         """
 
-        self.core = itchat.Core(user_agent)
-        self.user_agent = self.core.user_agent
+        self.core = itchat.Core()
+        self.user_agent = user_agent
         itchat.instanceList.append(self)
 
         enhance_connection(self.core.s)
